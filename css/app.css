@@ -20,7 +20,21 @@ body {
     background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
     font-family: 'Coda', cursive;
 }
-
+.modal-wrapper {
+    width: 200px;
+    height: 40px;
+}
+.opened-modal {
+    background-color: green;
+}
+.opened-button {
+    background-color: blue;
+}
+.modal-button {
+    width: 100px;
+    height: 20px;
+    margin-top: auto;
+}
 .container {
     display: flex;
     justify-content: center;
@@ -65,17 +79,17 @@ h1 {
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
 }
 
-.deck .card.open {
+.deck .card.opened {
     transform: rotateY(0);
     background: #02b3e4;
     cursor: default;
 }
 
-.deck .card.show {
+.deck .card.shown {
     font-size: 33px;
 }
 
-.deck .card.match {
+.deck .card.matched {
     cursor: default;
     background: #02ccba;
     font-size: 33px;
@@ -89,6 +103,17 @@ h1 {
     text-align: left;
     width: 345px;
     margin-bottom: 10px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -moz-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    -o-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
 .score-panel .stars {
@@ -106,4 +131,12 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+
+.get-invisible{
+    display: none;
+}
+
+.get-visible{
+    display: block;
 }

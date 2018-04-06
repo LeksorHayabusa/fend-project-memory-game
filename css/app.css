@@ -45,6 +45,11 @@ body {
 h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    font-size: 2em;
+}
+
+.score-panel{
+    font-size: 1.5em;
 }
 
 /*
@@ -133,10 +138,38 @@ h1 {
     cursor: pointer;
 }
 
-.get-invisible{
-    display: none;
+.game-over {
+    -webkit-flex-flow: column nowrap;
+    -moz-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    -o-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    margin:10% auto auto auto;
+}
+.stats-table{
+    text-align: center;
+}
+.game-over-button {
+    border: none;
+    background: none;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.5em;
+    color: #fff;
+}
+.game-over h1 {
+    font-size: 3em;
+    color: #fff;
 }
 
-.get-visible{
-    display: block;
+.game-over table {
+    font-size: 1.5em;
+}
+
+.get-invisible {
+    display: none !important;
+}
+
+.get-visible {
+    display: flex !important;
 }

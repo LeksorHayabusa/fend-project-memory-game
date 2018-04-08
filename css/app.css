@@ -98,7 +98,22 @@ h1 {
     cursor: default;
     background: #02ccba;
     font-size: 33px;
+    transition: background 1s;
+    animation: swing 1.5s ease;
 }
+
+.deck .card.mismatched {
+    background: #ed2939;
+    transition:background 1s;
+}
+
+@keyframes swing { 
+    from {
+        transform: rotateX(7deg);}
+    to{
+        transform: rorateX(-7deg);}
+}
+
 
 /*
  * Styles for the Score Panel

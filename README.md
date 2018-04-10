@@ -1,20 +1,71 @@
-# Memory Game Project
+# FEND Memory Game Project
 
-## Table of Contents
+This game is created to improve memory.
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+## Get started
+### To play
 
-## Instructions
+- go to [this link](https://leksorhayabusa.github.io/fend-project-memory-game/);
+- click any card to get started;
 
-This The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+### To Develop
 
-To get started, open `js/app.js` and start building out the app's functionality
+- **Fork** this repository
+- **Clone** it into your own machine
+- You can find the _index.html_ file inside the folder _src_
+- You can find the _style.css_ file inside the folder _src/css_
+- You can find the _script.js_ file inside the folder _src/js_
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+## Features
+### Technology used
 
-## Contributing
+This interective page is built with:
+ - HTML5/CSS3
+ - JavaScript
+ - JQuery
+- [FontAwesome](https://fontawesome.com/)
+- [Google Fonts](https://fonts.google.com/)
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+## Game rules
+
+You win the game when you have found the **8 pairs of matching cards**.
+
+### First start
+
+Click once on any card to get cards shuffled and see preview before the game start.
+
+### Flipping cards
+
+To flip the card and reveal its symbol, you should **click on it**. You can only have **2 active cards** at the same time.
+
+### Matching cards
+
+If the pair of cards you have revealed matched, the cards **stay face up** and you can click on 2 other cards to reveal their symbols.
+
+If the pair of cards you have revealed doesn't match, the cards **flip once again to be face down** and you can make another attempt.
+
+### Moves
+
+Every time you **reveal 2 cards**, you make a move. Thoses moves are tracked and you can watch them at any time (next to the hash icon).
+
+### Stars / Lifes
+
+You start with **3 stars** (lives, represented by the heart's icon). If you make a perfect game, you keep those 3 stars, but if you do more than 2 moves but fail, you lose **one star**.
+
+### Timer
+
+When you **start the game** the timer starts and you can watch the time you spend to finish the game. The timer ends when you have **found the 8 pairs of matching cards**.
+
+### Restart
+
+You can **reset the game** at any time pressing the button _RESTART_. It will restart the full game (stars, moves, timer and re-organized the grid of cards).
+
+### Winning screen
+
+Once you have found the 8 pairs of matching cards, the **winning screen appears** with a summary of your game (moves, stars, time), you can play again by pressing _RESTART GAME_.
+
+## Author
+
+Original game is made by **Nikonov Oleksii** for **Google-Udacity course**.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).

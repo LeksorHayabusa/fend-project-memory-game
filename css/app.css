@@ -20,21 +20,6 @@ body {
     background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
     font-family: 'Coda', cursive;
 }
-.modal-wrapper {
-    width: 200px;
-    height: 40px;
-}
-.opened-modal {
-    background-color: green;
-}
-.opened-button {
-    background-color: blue;
-}
-.modal-button {
-    width: 100px;
-    height: 20px;
-    margin-top: auto;
-}
 .container {
     display: flex;
     justify-content: center;
@@ -55,6 +40,18 @@ h1 {
 /*
  * Styles for the deck of cards
  */
+
+@media screen and (max-width: 700px) {
+    .deck {
+        width: 400px;
+        max-height: 420px;
+    }
+
+    .deck .card {
+        height: 75px;
+        width: 75px;
+    }
+}
 
 .deck {
     width: 660px;
@@ -82,38 +79,69 @@ h1 {
     justify-content: center;
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    transform: rotateY(180deg);
+    transition: transform 0.5s, font-size 0.2s, background 0.1s;
+    opacity: 1;
 }
 
 .deck .card.opened {
-    transform: rotateY(0);
-    background: #02b3e4;
+    transform: rotateY(360deg);
+    background-color: #02ccba;
     cursor: default;
+    transition: transform 2s;
 }
 
 .deck .card.shown {
     font-size: 33px;
+    transition: all 0.5s;
 }
 
 .deck .card.matched {
     cursor: default;
-    background: #02ccba;
+    background-color: #02b3e4;
     font-size: 33px;
-    transition: background 1s;
-    animation: swing 1.5s ease;
+    transition: background 0.15s;
+    animation: shaking 0.2s ease-in-out 2;
 }
 
 .deck .card.mismatched {
-    background: #ed2939;
-    transition:background 1s;
+    background: #D7006E;
+    transition: background 0.15s;
+    animation: swinging 0.2s ease-in-out 2;
 }
 
-@keyframes swing { 
-    from {
-        transform: rotateX(7deg);}
-    to{
-        transform: rorateX(-7deg);}
+@keyframes shaking {
+    33.3%{
+        transform: translate(0,-4px);
+    }
+    66.6%{
+        transform: translate(0,4px);
+    }
 }
 
+@keyframes swinging {
+    33.3% {
+        transform: rotateZ(5deg);
+    }
+    66.6% {
+        transform: rotateZ(-5deg);
+    }
+}
+
+.deck .card.cardsDisappearance {
+    opacity: 0;
+    transition: opacity 1.5s;
+   animation: cardsDisappearance 2s ease-out 1;
+} 
+   
+   @keyframes cardsDisappearance {
+   0 {
+       transform: translate(0,0);
+   }
+   100% {
+       transform: translate(0,100px);
+   }
+}
 
 /*
  * Styles for the Score Panel
@@ -160,31 +188,48 @@ h1 {
     -o-flex-flow: column nowrap;
     flex-flow: column nowrap;
     margin:10% auto auto auto;
+    justify-content: space-between;
 }
-.stats-table{
+
+.stats-table {
     text-align: center;
 }
+
 .game-over-button {
+    border-radius: 8px;
     border: none;
-    background: none;
-    padding: 10px;
+    background: #02ccba;
+    padding: 20px;
     margin: 0;
     font-size: 1.5em;
     color: #fff;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    margin-top: 30px;
 }
 .game-over h1 {
     font-size: 3em;
     color: #fff;
+    -ms-text-justify: distribute;
+    text-justify: distribute;
 }
 
 .game-over table {
     font-size: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.game-over table td,
+.game-over table th {
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .get-invisible {
     display: none !important;
+    opacity: 0;
 }
 
 .get-visible {
     display: flex !important;
+    opacity: 1;
 }

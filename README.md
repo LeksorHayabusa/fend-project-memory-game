@@ -20,11 +20,28 @@ This game is created to improve memory.
 ### Technology used
 
 This interective page is built with:
- - HTML5/CSS3
- - JavaScript
- - JQuery
-- [FontAwesome](https://fontawesome.com/)
-- [Google Fonts](https://fonts.google.com/)
+* HTML5/CSS3
+* JavaScript
+* JQuery
+* [FontAwesome](https://fontawesome.com/)
+* [Google Fonts](https://fonts.google.com/)
+
+### Additional features
+* All icons are add dinamically. This means that you cant see them in chrome devtool (in css or html)
+* All results of attempts are record until the page does not reload;
+* Animation on start game (shows all cards);
+* Animation at the end (waterfall);
+* Flip, match and mismatch cards animation;
+* Stars rating;
+
+### User experience
+
+* When you uncover the pair of cards all other clicks are ignore;
+* The same behaviour when the animation plays;
+* When you win the game the timer stops automatically but does not clear until you not click "Play again" or Reload button. The same with moves counter and stars rating;
+* By default 10 attempts costs one star. To change this parameter you need to change maxMoves const;
+* Average* - in the result table it shows average time (in seconds) need you to find a matching pair;
+* Grid is responsive;
 
 ## Game rules
 

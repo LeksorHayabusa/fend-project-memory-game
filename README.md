@@ -62,7 +62,7 @@ You can **reset the game** at any time pressing the button _RESTART_. It will re
 
 ### Winning screen
 
-Once you have found the 8 pairs of matching cards, the **winning screen appears** with a summary of your game (moves, stars, time), you can play again by pressing _RESTART GAME_.
+Once you have found the 8 pairs of matching cards, the **winning screen appears** with a summary of your game (moves, stars, time), you can play again by pressing _PLAY AGAIN_.
 
 ## Author
 

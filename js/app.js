@@ -80,7 +80,6 @@ $(function(){
 
 		function compareTwoCards(){
 			let secondNotMatched = cards.eq(secondCardIndex).children('i');
-			moves.text(++gameStats[i][1]);
 			if(secondCardIndex != firstCardIndex && !cards.eq(secondCardIndex).hasClass('matched')){ //is one card clicked twice?
 				if(secondCardClass == firstCardClass){ //does one card match to second?
 					applyCardsMatching();
@@ -96,6 +95,7 @@ $(function(){
 					//this line is needed to create closure and store clicked elements' index
 					setTimeout(closeUnmatchedCards(firstCardIndex,secondCardIndex), 1000);
 				}
+				moves.text(++gameStats[i][1]);
 			} else {(cards.on('click.openSecond', openSecondCard))}
 		}
 

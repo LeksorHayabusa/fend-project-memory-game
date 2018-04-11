@@ -10,11 +10,31 @@ This game is created to improve memory.
 
 ### To Develop
 
-- **Fork** this repository
-- **Clone** it into your own machine
 - You can find the _index.html_ file inside the folder _src_
 - You can find the _style.css_ file inside the folder _src/css_
 - You can find the _script.js_ file inside the folder _src/js_
+
+Here is the list of some main functions for better understand my code:
+The start game function serves for first start and restarts including stopwatch, card shuffling and preview.
+```
+function restartGame(){}
+```
+The next function is the **main** one handles card clicking, representing, hidding, matching and mismatching. Also it ends game.
+```
+function findMatchingCards(){}
+```
+The function beneath shuffles and reassign icons to the cards.
+```function getCardsShuffled(){}
+```
+Stopwatch func is built on setInverval to avoid counting time being freezed when browser doesnt respond.
+```
+Function stopWatch(){}
+```
+The last functions in main tree is used to appear and disappear cards and game finish window.
+```
+function showModalWindow(){}
+function closeModalWindow(){
+```
 
 ## Features
 ### Technology used

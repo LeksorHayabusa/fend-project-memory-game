@@ -33,7 +33,7 @@ Function stopWatch(){}
 The last functions in main tree is used to appear and disappear cards and game finish window.
 ```
 function showModalWindow(){}
-function closeModalWindow(){
+function closeModalWindow(){}
 ```
 
 ## Features

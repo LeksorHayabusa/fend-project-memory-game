@@ -3,11 +3,6 @@
 This game is created to improve memory.
 
 ## Get started
-### To play
-
-- go to [this link](https://leksorhayabusa.github.io/fend-project-memory-game/);
-- click any card to get started;
-
 ### To Develop
 
 - You can find the _index.html_ file inside the folder _src_
@@ -62,6 +57,11 @@ This interective page is built with:
 * By default 10 attempts costs one star. To change this parameter you need to change maxMoves const;
 * Average* - in the result table it shows average time (in seconds) need you to find a matching pair;
 * Grid is responsive;
+
+## Game play
+
+- go to [this link](https://leksorhayabusa.github.io/fend-project-memory-game/);
+- click any card to get started;
 
 ## Game rules
 

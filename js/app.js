@@ -165,11 +165,6 @@ $(function(){
 		}, 1000)
 	}
 
-	function showGameResult(){	
-			$('.stats-table  tbody').append('<tr><td>' + (i+1) + '</td><td>' +
-				gameStats[i][0] + '</td><td>' + gameStats[i][1] + '</td><td>' + gameStats[i][2] + '</td></tr>');
-			i++;
-	}
 
 	function showModalWindow(){
 		cards.addClass('cardsDisappearance');
@@ -180,6 +175,12 @@ $(function(){
 		gameOver.addClass('get-visible');
 		},1500);
 		showGameResult();
+		
+		function showGameResult(){	
+				$('.stats-table  tbody').append('<tr><td>' + (i+1) + '</td><td>' +
+					gameStats[i][0] + '</td><td>' + gameStats[i][1] + '</td><td>' + gameStats[i][2] + '</td></tr>');
+				i++;
+		}
 	}
 
 	function closeModalWindow(){
